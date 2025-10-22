@@ -49,20 +49,19 @@
   </style>
 </head>
 <body>
-  <h1>Generador de QR — Empresas</h1>
-  <button id="generateBtn">Generar QR</button>
+  <h1>Acceso</h1>
   <div id="qrcode"></div>
   <div id="texto"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script>
-    const generateBtn = document.getElementById('generateBtn');
     const qrcodeContainer = document.getElementById('qrcode');
     const texto = document.getElementById('texto');
 
     // 🔹 Lista de empresas (puedes agregar más manualmente)
     const empresas = [
-      "Turismar"
+      "Turismar",
+      "COT"
       // Agrega más empresas aquí, ej:
       // "COPSA", "CUTCSA", "COT", "TAC"
     ];
@@ -103,8 +102,6 @@
       });
       texto.textContent = textoQR;
     }
-
-    generateBtn.addEventListener('click', generarQR);
 
     // Genera uno al cargar
     generarQR();
